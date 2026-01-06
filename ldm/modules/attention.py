@@ -181,7 +181,7 @@ class CrossAttention(nn.Module):
         )
         
 
-    def forward(self, x, context=None, mask=None, mask1=None, mask2=None, use_attention_tv_loss=False):
+    def forward(self, x, context=None, mask=None, mask1=None, mask2=None, use_attention_tv_loss=False, hint=None, **kwargs):
         h = self.heads
         is_self_attn = context is None
         q = self.to_q(x)
